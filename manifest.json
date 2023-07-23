@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "I-Akrotech AutoClicker",
+  "version": "1.0",
+  "description": "Automatically clicks on the page per period specified.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "icons": {
+    "48": "icon.png"
+  }
+}
